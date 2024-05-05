@@ -45,7 +45,7 @@ class IndividualArticleScreen extends StatelessWidget {
                   SizedBox(
                     height: 170.h,
                     child: Image.asset(
-                      "Images/NavBar/Articles/Rectangle 2 (7).png",
+                      "Images/NavBar/Articles/Individual article/breakfast article.png",
                       fit: BoxFit.cover,
                     ),
                   ),

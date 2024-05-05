@@ -42,11 +42,13 @@ import 'package:low_calories_app/pages/NavBar/Settings/My_Payment/My_Payment_Scr
 import 'package:low_calories_app/pages/NavBar/Settings/NewPasswordSettings.dart';
 import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/PhysicalDataAge.dart';
 import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/PhysicalDataWeight.dart';
+import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/Physical_Data_Gender.dart';
 import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/Physical_Data_Height.dart';
 import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/Physical_Data_Sensitivities.dart';
 import 'package:low_calories_app/pages/NavBar/Settings/Profile_Settings.dart';
 import 'package:low_calories_app/pages/NavBar/Settings/Settings_Screen.dart';
 import 'package:low_calories_app/pages/NavBar/Settings/VerificationDeleteAccount.dart';
+import 'package:low_calories_app/pages/NavBar/Settings/VerificationSettings.dart';
 import 'package:low_calories_app/pages/Onboarding_screen/Onboarding_body.dart';
 
 void main() {
@@ -67,7 +69,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: PackagesScreen(),
+            home: NavBar(),
           );
         });
   }

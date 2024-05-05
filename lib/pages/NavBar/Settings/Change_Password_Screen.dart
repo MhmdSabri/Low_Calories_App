@@ -81,7 +81,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           secret = !secret;
                         });
                       },
-                      icon: Image.asset("Images/Create_Account/eye.png")),
+                      icon: Image.asset("Images/Create_Account/eye (1).png")),
                   fillColor: const Color(0xffFFFFFF),
                   filled: true,
                   labelStyle: TextStyle(
@@ -129,7 +129,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           secret2 = !secret2;
                         });
                       },
-                      icon: Image.asset("Images/Create_Account/eye.png")),
+                      icon: Image.asset("Images/Create_Account/eye (1).png")),
                   fillColor: const Color(0xffFFFFFF),
                   filled: true,
                   labelStyle: TextStyle(
@@ -177,7 +177,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           secret3 = !secret3;
                         });
                       },
-                      icon: Image.asset("Images/Create_Account/eye.png")),
+                      icon: Image.asset("Images/Create_Account/eye (1).png")),
                   fillColor: const Color(0xffFFFFFF),
                   filled: true,
                   labelStyle: TextStyle(

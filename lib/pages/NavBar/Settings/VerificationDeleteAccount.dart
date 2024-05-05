@@ -29,7 +29,7 @@ class VerificationDeleteAccount extends StatelessWidget {
                           height: 160.h,
                           width: 185.w,
                           child: Image.asset(
-                              "Images/Verification/Verification.png")),
+                              "Images/Create_Account/Verification/Verification.png")),
                     ],
                   ),
                 ),

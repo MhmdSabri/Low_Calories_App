@@ -43,7 +43,8 @@ class _PhysicalDataWeightState extends State<PhysicalDataWeight> {
                       SizedBox(
                           height: 160.h,
                           width: 185.w,
-                          child: Image.asset("Images/Body_data/weight.png")),
+                          child: Image.asset(
+                              "Images/Create_Account/Body data/weight/weight.png")),
                     ],
                   ),
                 ),

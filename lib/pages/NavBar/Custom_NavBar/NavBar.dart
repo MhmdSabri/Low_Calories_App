@@ -28,6 +28,7 @@ class _NavBarState extends State<NavBar> {
   int selectedindex = 0;
   int? index;
   var isPressed = false;
+  // bool onSelected = true;
 
   @override
   Widget build(BuildContext context) {
@@ -51,90 +52,62 @@ class _NavBarState extends State<NavBar> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        height: 60.h,
-        padding: EdgeInsets.zero,
-        shape: const CircularNotchedRectangle(),
-        notchMargin: 5,
-        clipBehavior: Clip.antiAlias,
-        child: Container(
-          height: 60,
           color: Colors.white,
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: Colors.white,
-            currentIndex: selectedindex,
-            onTap: (int index) {
-              setState(() {
-                selectedindex = index;
-              });
-            },
-            items: [
-              BottomNavigationBarItem(
-                icon: Center(child: Builder(builder: (context) {
-                  if (selectedindex == 0) {
-                    return SvgPicture.asset(
-                      "Images/NavBar/selectedHome.svg",
-                    );
-                  } else {
-                    return SvgPicture.asset(
-                      "Images/NavBar/home (3).svg",
-                    );
-                  }
-                })),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Center(child: Builder(builder: (context) {
-                  if (selectedindex == 1) {
-                    return SvgPicture.asset(
-                      "Images/NavBar/selectednotifi.svg",
-                    );
-                  } else {
-                    return SvgPicture.asset(
-                      "Images/NavBar/notifications.svg",
-                    );
-                  }
-                })),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Center(child: Builder(builder: (context) {
-                  if (selectedindex == 2) {
-                    return SvgPicture.asset(
-                      "Images/NavBar/selectedAbout.svg",
-                    );
-                  } else {
-                    return SvgPicture.asset(
-                      "Images/NavBar/about.svg",
-                    );
-                  }
-                })),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Center(child: Builder(builder: (context) {
-                  if (selectedindex == 3) {
-                    return SvgPicture.asset(
-                      "Images/NavBar/selectedSetting.svg",
-                    );
-                  } else {
-                    return SvgPicture.asset(
-                      "Images/NavBar/settings.svg",
-                    );
-                  }
-                })),
-                label: '',
-              ),
+          height: 55.h,
+          shape: const CircularNotchedRectangle(),
+          notchMargin: 9,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              IconButton(
+                  icon: selectedindex == 0
+                      ? SvgPicture.asset(
+                          "Images/NavBar/selectedHome.svg",
+                        )
+                      : SvgPicture.asset("Images/NavBar/home (3).svg"),
+                  onPressed: () {
+                    setState(() {
+                      onIconPressed(0);
+                    });
+                  }),
+              IconButton(
+                  icon: selectedindex == 1
+                      ? SvgPicture.asset(
+                          "Images/NavBar/selectednotifi.svg",
+                        )
+                      : SvgPicture.asset("Images/NavBar/notifications.svg"),
+                  onPressed: () {
+                    setState(() {
+                      onIconPressed(1);
+                    });
+                  }),
+              SizedBox(width: 40.w), // The dummy child
+              IconButton(
+                  icon: selectedindex == 2
+                      ? SvgPicture.asset("Images/NavBar/selectedAbout.svg")
+                      : SvgPicture.asset("Images/NavBar/about.svg"),
+                  onPressed: () {
+                    setState(() {
+                      onIconPressed(2);
+                    });
+                  }),
+              IconButton(
+                  icon: selectedindex == 3
+                      ? SvgPicture.asset("Images/NavBar/selectedSetting.svg")
+                      : SvgPicture.asset("Images/NavBar/settings.svg"),
+                  onPressed: () {
+                    setState(() {
+                      onIconPressed(3);
+                    });
+                  }),
             ],
-          ),
-        ),
-      ),
+          )),
     );
   }
 
-  // void onchangedTab(int index) {
-  //   setState(() {
-  //     this.index = index;
-  //   });
-  // }
+  void onIconPressed(int index) {
+    setState(() {
+      selectedindex = index;
+    });
+  }
 }

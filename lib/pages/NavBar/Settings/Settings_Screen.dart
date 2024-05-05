@@ -403,7 +403,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 },
                                 child: Container(
                                   width: double.infinity,
-                                  height: 55.h,
+                                  height: 50.h,
                                   padding: EdgeInsets.only(right: 8.r),
                                   decoration: ShapeDecoration(
                                     color: click
@@ -459,7 +459,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 },
                                 child: Container(
                                   width: double.infinity,
-                                  height: 55.h,
+                                  height: 50.h,
                                   padding: EdgeInsets.only(right: 8.r),
                                   decoration: ShapeDecoration(
                                     color: !click
@@ -644,7 +644,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               height: 160.h,
                               width: 160.w,
                               child: Image.asset(
-                                  "Images/Congratulations/Congratulations.png"),
+                                  "Images/Create_Account/Verification/Congratulations.png"),
                             ),
                             SizedBox(height: 15.h),
                             Column(
@@ -859,7 +859,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                             height: 160.h,
                                             width: 160.w,
                                             child: Image.asset(
-                                                "Images/Congratulations/Congratulations.png"),
+                                                "Images/Create_Account/Verification/Congratulations.png"),
                                           ),
                                           SizedBox(height: 15.h),
                                           Column(

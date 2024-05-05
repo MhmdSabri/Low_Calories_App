@@ -47,7 +47,7 @@ class DashboardScreen extends StatelessWidget {
                   width: double.infinity,
                   child: Column(children: [
                     Image.asset(
-                        "Images/NavBar/Settings/Dashboard/14327652_5473861 1.png")
+                        "Images/NavBar/Settings/Dashboard/Dashboard.png")
                   ]),
                 )
               ],

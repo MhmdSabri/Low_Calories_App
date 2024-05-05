@@ -51,7 +51,7 @@ class LegalAndPoliciesSettingsScreen extends StatelessWidget {
                             child: SizedBox(
                               height: 110.h,
                               child: Image.asset(
-                                  "Images/Create_Account/Legal and Policies/LegalAndPolicies.png"),
+                                  "Images/Create_Account/Legal and Policies/Legal and Policies.png"),
                             )),
                       ],
                     ),

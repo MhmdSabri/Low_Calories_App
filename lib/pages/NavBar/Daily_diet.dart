@@ -13,23 +13,23 @@ class DailyDietScreen extends StatefulWidget {
 
 class _DailyDietScreenState extends State<DailyDietScreen> {
   List dietPlanDetails = [
-    "Images/HomePage/Diet Plan details2/Rectangle 7 (10).png",
-    "Images/HomePage/Diet Plan details2/Rectangle 7 (11).png",
-    "Images/HomePage/Diet Plan details2/Rectangle 7 (12).png",
-    "Images/HomePage/Diet Plan details2/Rectangle 7 (13).png",
+    "Images/HomePage/dietPlanDetails/LV1.png",
+    "Images/HomePage/dietPlanDetails/LV2.png",
+    "Images/HomePage/dietPlanDetails/LV3.png",
+    "Images/HomePage/dietPlanDetails/LV4.png",
   ];
 
   List contBackground = [
-    "Images/HomePage/Daily diet.Screen/Frame one.png",
-    "Images/HomePage/Daily diet.Screen/Frame two.png",
-    "Images/HomePage/Daily diet.Screen/Frame three.png",
-    "Images/HomePage/Daily diet.Screen/Frame four.png",
+    "Images/HomePage/Daily diet.Screen/frames/Frame one.png",
+    "Images/HomePage/Daily diet.Screen/frames/Frame two.png",
+    "Images/HomePage/Daily diet.Screen/frames/Frame three.png",
+    "Images/HomePage/Daily diet.Screen/frames/Frame four.png",
   ];
   List mealImage = [
-    "Images/HomePage/Daily diet.Screen/Toast with egg.png",
-    "Images/HomePage/Daily diet.Screen/mac.png",
-    "Images/HomePage/Daily diet.Screen/bread.png",
-    "Images/HomePage/Daily diet.Screen/dessert.png",
+    "Images/HomePage/Daily diet.Screen/breakfast.png",
+    "Images/HomePage/Daily diet.Screen/lunch.png",
+    "Images/HomePage/Daily diet.Screen/dinner.png",
+    "Images/HomePage/Daily diet.Screen/desert.png",
   ];
 
   List mealNmae = [

@@ -37,7 +37,8 @@ class _PhysicalDataAgeState extends State<PhysicalDataAge> {
                       SizedBox(
                           height: 160.h,
                           width: 185.w,
-                          child: Image.asset("Images/Body_data/age.png")),
+                          child: Image.asset(
+                              "Images/Create_Account/Body data/age/age.png")),
                     ],
                   ),
                 ),

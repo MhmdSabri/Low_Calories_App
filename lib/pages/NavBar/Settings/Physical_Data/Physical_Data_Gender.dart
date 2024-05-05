@@ -34,7 +34,8 @@ class _PhysicalDataGenderState extends State<PhysicalDataGender> {
                       SizedBox(
                           height: 160.h,
                           width: 185.w,
-                          child: Image.asset("Images/Body_data/gender.png")),
+                          child: Image.asset(
+                              "Images/Create_Account/Body data/Gender/Gender.png")),
                     ],
                   ),
                 ),

@@ -11,13 +11,13 @@ class ArticlesScreen extends StatefulWidget {
 
 class _ArticlesScreenState extends State<ArticlesScreen> {
   List articleImage = [
+    "Images/NavBar/Articles/Rectangle 1.png",
     "Images/NavBar/Articles/Rectangle 2.png",
-    "Images/NavBar/Articles/Rectangle 2 (1).png",
-    "Images/NavBar/Articles/Rectangle 2 (2).png",
-    "Images/NavBar/Articles/Rectangle 2 (3).png",
-    "Images/NavBar/Articles/Rectangle 2 (4).png",
-    "Images/NavBar/Articles/Rectangle 2 (5).png",
-    "Images/NavBar/Articles/Rectangle 2 (6).png",
+    "Images/NavBar/Articles/Rectangle 3.png",
+    "Images/NavBar/Articles/Rectangle 4.png",
+    "Images/NavBar/Articles/Rectangle 5.png",
+    "Images/NavBar/Articles/Rectangle 6.png",
+    "Images/NavBar/Articles/Rectangle 7.png",
   ];
   List articlrTitle = [
     "Nutrition Essentials: A Guide to Healthy Eating Habits",

@@ -123,27 +123,46 @@ class ChangePaymentScreen extends StatelessWidget {
               ),
             ]),
             SizedBox(height: 15.h),
-            Row(children: [
-              Text(
-                'Expired',
-                style: TextStyle(
-                  color: const Color(0xFF12161C),
-                  fontSize: 12.5.sp,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(width: 100.w),
-              Text(
-                'CVV Code',
-                style: TextStyle(
-                  color: const Color(0xFF12161C),
-                  fontSize: 12.5.sp,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ]),
+            Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Expired',
+                          style: TextStyle(
+                            color: const Color(0xFF12161C),
+                            fontSize: 12.5.sp,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // SizedBox(width: 100.w),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'CVV Code',
+                          style: TextStyle(
+                            color: const Color(0xFF12161C),
+                            fontSize: 12.5.sp,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
             SizedBox(height: 5.h),
             Row(
               children: [
@@ -217,7 +236,7 @@ class ChangePaymentScreen extends StatelessWidget {
                   height: 42.h,
                   minWidth: double.infinity,
                   child: Text(
-                    'Save Cerd',
+                    'Save Card',
                     style: TextStyle(
                         color: const Color(0xffFFFFFF),
                         fontSize: 14.5.sp,
@@ -241,7 +260,7 @@ class ChangePaymentScreen extends StatelessWidget {
                                 const MyPaymentScreen()));
                   },
                   child: Text(
-                    'Remove Cerd',
+                    'Remove Card',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: const Color(0xFF85BE46),

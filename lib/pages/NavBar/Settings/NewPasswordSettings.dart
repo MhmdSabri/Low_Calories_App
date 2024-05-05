@@ -117,7 +117,7 @@ class _NewPasswordSettingsState extends State<NewPasswordSettings> {
                                   });
                                 },
                                 icon: Image.asset(
-                                    "Images/Create_Account/eye.png")),
+                                    "Images/Create_Account/eye (1).png")),
                             fillColor: const Color(0xffFFFFFF),
                             filled: true,
                             labelStyle: TextStyle(
@@ -167,7 +167,7 @@ class _NewPasswordSettingsState extends State<NewPasswordSettings> {
                                   });
                                 },
                                 icon: Image.asset(
-                                    "Images/Create_Account/eye.png")),
+                                    "Images/Create_Account/eye (1).png")),
                             fillColor: const Color(0xffFFFFFF),
                             filled: true,
                             labelStyle: TextStyle(

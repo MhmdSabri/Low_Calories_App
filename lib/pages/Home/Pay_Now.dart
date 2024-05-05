@@ -157,7 +157,7 @@ class _PayNowScreenState extends State<PayNowScreen> {
                               decoration: ShapeDecoration(
                                 image: const DecorationImage(
                                   image: AssetImage(
-                                      "Images/HomePage/Restaurant branches/Rectangle 7.png"),
+                                      "Images/HomePage/My dietary plan/My dietary plan.png"),
                                   fit: BoxFit.fill,
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -584,7 +584,7 @@ class _PayNowScreenState extends State<PayNowScreen> {
                           Column(
                             children: [
                               Image.asset(
-                                  "Images/HomePage/payNow/payNow completed.png"),
+                                  "Images/HomePage/payNow/payCompleted.png"),
                             ],
                           ),
                           SizedBox(height: 10.h),
@@ -637,7 +637,7 @@ class _PayNowScreenState extends State<PayNowScreen> {
                                             height: 160.h,
                                             width: 160.w,
                                             child: Image.asset(
-                                                "Images/Congratulations/Congratulations.png"),
+                                                "Images/Create_Account/Verification/Congratulations.png"),
                                           ),
                                           SizedBox(height: 15.h),
                                           Column(

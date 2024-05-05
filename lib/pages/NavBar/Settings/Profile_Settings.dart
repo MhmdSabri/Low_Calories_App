@@ -447,7 +447,13 @@ class ProfileSettings extends StatelessWidget {
           Column(
             children: [
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const SettingsScreen()));
+                },
                 color: const Color(0xFF85BE46),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6.r)),

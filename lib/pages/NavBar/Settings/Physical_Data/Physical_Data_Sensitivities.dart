@@ -38,7 +38,7 @@ class _PhysicalDataSensitivitiesState extends State<PhysicalDataSensitivities> {
                           height: 160.h,
                           width: 185.w,
                           child: Image.asset(
-                              "Images/Body_data/sensitivities.png")),
+                              "Images/Create_Account/Body data/sensitivities/sensitivities.png")),
                     ],
                   ),
                 ),
@@ -273,7 +273,7 @@ class _PhysicalDataSensitivitiesState extends State<PhysicalDataSensitivities> {
                                                   height: 160.h,
                                                   width: 160.w,
                                                   child: Image.asset(
-                                                      "Images/Congratulations/Congratulations.png"),
+                                                      "Images/Create_Account/Verification/Congratulations.png"),
                                                 ),
                                                 SizedBox(height: 15.h),
                                                 Column(

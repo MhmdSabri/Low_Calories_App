@@ -13,10 +13,10 @@ class MealDataScreen extends StatefulWidget {
 
 class _MealDataScreenState extends State<MealDataScreen> {
   List dietPlanDetails = [
-    "Images/HomePage/Daily diet.Screen/Meal data/md1.png",
-    "Images/HomePage/Daily diet.Screen/Meal data/md2.png",
-    "Images/HomePage/Daily diet.Screen/Meal data/md3.png",
-    "Images/HomePage/Daily diet.Screen/Meal data/md4.png",
+    "Images/HomePage/Daily diet.Screen/Meal data/MD1.png",
+    "Images/HomePage/Daily diet.Screen/Meal data/MD2.png",
+    "Images/HomePage/Daily diet.Screen/Meal data/MD3.png",
+    "Images/HomePage/Daily diet.Screen/Meal data/MD4.png",
   ];
 
   var controller = PageController();
@@ -394,10 +394,10 @@ class _MealDataScreenState extends State<MealDataScreen> {
             Row(
               children: [
                 Image.asset(
-                    "Images/HomePage/Daily diet.Screen/Meal data/1.1.png"),
+                    "Images/HomePage/Daily diet.Screen/Meal data/vegetables.png"),
                 SizedBox(width: 5.w),
                 SizedBox(
-                  width: 300.w,
+                  width: 290.w,
                   child: Text(
                     'Ingredients',
                     style: TextStyle(
@@ -439,7 +439,7 @@ class _MealDataScreenState extends State<MealDataScreen> {
             Row(
               children: [
                 Image.asset(
-                    "Images/HomePage/Daily diet.Screen/Meal data/1.2.png"),
+                    "Images/HomePage/Daily diet.Screen/Meal data/alarm.png"),
                 SizedBox(width: 5.w),
                 SizedBox(
                   width: 300.w,
@@ -542,7 +542,7 @@ class _MealDataScreenState extends State<MealDataScreen> {
             Row(
               children: [
                 Image.asset(
-                    "Images/HomePage/Daily diet.Screen/Meal data/1.3.png"),
+                    "Images/HomePage/Daily diet.Screen/Meal data/menu.png"),
                 SizedBox(width: 5.w),
                 SizedBox(
                   width: 300.w,
