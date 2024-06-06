@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/My_Payment/CardExpirationFormatter.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/My_Payment/My_Payment_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/My_Payment/CardExpirationFormatter.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/My_Payment/My_Payment_Screen.dart';
 
 class AddNewPayment extends StatelessWidget {
   const AddNewPayment({super.key});
@@ -10,38 +10,33 @@ class AddNewPayment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const MyPaymentScreen()));
+            },
+            icon: const Icon(Icons.arrow_circle_left_outlined)),
+        title: Text(
+          "Add New Payment",
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.all(10.w),
+        padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
         child: Column(
           children: [
-            SizedBox(height: 30.h),
-            Row(
-              children: [
-                GestureDetector(
-                    onTap: () {
-                      Navigator.pop(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  const MyPaymentScreen()));
-                    },
-                    child: const Icon(Icons.arrow_circle_left_outlined)),
-                SizedBox(
-                  width: 90.w,
-                ),
-                Text(
-                  "Add New Payment",
-                  style: TextStyle(
-                    color: const Color(0xFF12161C),
-                    fontSize: 14.sp,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10.h),
             Row(
               children: [
                 Text(

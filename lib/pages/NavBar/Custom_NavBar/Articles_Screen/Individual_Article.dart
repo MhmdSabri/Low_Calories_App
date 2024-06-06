@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/NavBar/Custom_NavBar/Articles_Screen/Articles_screen.dart';
+import 'package:Low_Calories/pages/NavBar/Custom_NavBar/Articles_Screen/Articles_screen.dart';
 
 class IndividualArticleScreen extends StatelessWidget {
   const IndividualArticleScreen({super.key});
@@ -8,38 +8,33 @@ class IndividualArticleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const ArticlesScreen()));
+            },
+            icon: const Icon(Icons.arrow_circle_left_outlined)),
+        title: Text(
+          'Articles',
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(10.w),
+          padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
           child: Column(
             children: [
-              SizedBox(height: 30.h),
-              Row(
-                children: [
-                  GestureDetector(
-                      onTap: () {
-                        Navigator.pop(
-                            context,
-                            MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    const ArticlesScreen()));
-                      },
-                      child: const Icon(Icons.arrow_circle_left_outlined)),
-                  SizedBox(
-                    width: 120.w,
-                  ),
-                  Text(
-                    'Articles',
-                    style: TextStyle(
-                      color: const Color(0xFF12161C),
-                      fontSize: 14.sp,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10.h),
               Column(
                 children: [
                   SizedBox(

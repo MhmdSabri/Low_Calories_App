@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:low_calories_app/pages/NavBar/Custom_NavBar/NavBar.dart';
+import 'package:Low_Calories/pages/NavBar/Custom_NavBar/NavBar.dart';
 
 class MedicalInstructions extends StatefulWidget {
   const MedicalInstructions({super.key});
@@ -46,35 +46,30 @@ class _MedicalInstructionsState extends State<MedicalInstructions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(10.w),
-        child: Column(children: [
-          SizedBox(height: 30.h),
-          Row(
-            children: [
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => const NavBar()));
-                  },
-                  child: const Icon(Icons.arrow_circle_left_outlined)),
-              SizedBox(
-                width: 90.w,
-              ),
-              Text(
-                'Medical instructions',
-                style: TextStyle(
-                  color: const Color(0xFF12161C),
-                  fontSize: 14.sp,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => const NavBar()));
+            },
+            icon: const Icon(Icons.arrow_circle_left_outlined)),
+        title: Text(
+          'Medical instructions',
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
           ),
-          SizedBox(height: 15.h),
+        ),
+      ),
+      body: Padding(
+        padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
+        child: Column(children: [
           Expanded(
             child: ListView.builder(
               padding: EdgeInsets.zero,

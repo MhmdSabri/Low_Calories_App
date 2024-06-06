@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:low_calories_app/pages/Login/Forgot_your_password.dart';
-import 'package:low_calories_app/pages/Login/New_Password.dart';
+import 'package:Low_Calories/pages/Login/Forgot_your_password.dart';
+import 'package:Low_Calories/pages/Login/New_Password.dart';
 import 'package:otp_text_field/style.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 

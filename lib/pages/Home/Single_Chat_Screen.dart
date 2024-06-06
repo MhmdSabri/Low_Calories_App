@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:low_calories_app/pages/NavBar/Custom_NavBar/NavBar.dart';
+import 'package:Low_Calories/pages/NavBar/Custom_NavBar/NavBar.dart';
 
 class SingleChatScreen extends StatelessWidget {
   const SingleChatScreen({super.key});
@@ -32,7 +32,7 @@ class SingleChatScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.all(10.w),
+        padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
         child: Column(
           children: [
             Expanded(

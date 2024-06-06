@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:low_calories_app/pages/Home/HomePage.dart';
+import 'package:Low_Calories/pages/Home/HomePage.dart';
 
-import 'package:low_calories_app/pages/NavBar/Custom_NavBar/Articles_Screen/Articles_screen.dart';
-import 'package:low_calories_app/pages/NavBar/Daily_diet.dart';
-// import 'package:low_calories_app/pages/NavBar/Custom_NavBar/tabbar_material_widget.dart';
-import 'package:low_calories_app/pages/NavBar/Notifications.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Settings_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Custom_NavBar/Articles_Screen/Articles_screen.dart';
+import 'package:Low_Calories/pages/NavBar/Daily_diet.dart';
+// import 'package:Low_Calories/pages/NavBar/Custom_NavBar/tabbar_material_widget.dart';
+import 'package:Low_Calories/pages/NavBar/Notifications.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Settings_Screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -23,12 +23,11 @@ class _NavBarState extends State<NavBar> {
     const Notifications(),
     const ArticlesScreen(),
     const SettingsScreen(),
+    const DailyDietScreen(),
   ];
 
   int selectedindex = 0;
   int? index;
-  var isPressed = false;
-  // bool onSelected = true;
 
   @override
   Widget build(BuildContext context) {
@@ -36,23 +35,18 @@ class _NavBarState extends State<NavBar> {
       body: pages[selectedindex],
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
-        backgroundColor: isPressed ? const Color(0xff85BE46) : Colors.white,
+        backgroundColor:
+            selectedindex == 4 ? const Color(0xff85BE46) : Colors.white,
         onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (BuildContext context) => const DailyDietScreen()));
-          return setState(() {
-            isPressed = !isPressed;
-          });
+          onIconPressed(4);
         },
-        child: isPressed
+        child: selectedindex == 4
             ? SvgPicture.asset("Images/NavBar/FABWhite.svg")
             : SvgPicture.asset("Images/NavBar/floatingactbutton.svg"),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-          color: Colors.white,
+          color: const Color(0xffFFFFFF),
           height: 55.h,
           shape: const CircularNotchedRectangle(),
           notchMargin: 9,
@@ -111,3 +105,58 @@ class _NavBarState extends State<NavBar> {
     });
   }
 }
+
+
+
+
+
+
+
+
+BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.red,
+        unselectedItemColor: Colors.grey,
+        currentIndex: selectedindex,
+        // onTap: (value) {
+        //   currentIndex = value;
+        //   _pageController.animateToPage(
+        //     value,
+        //     duration: Duration(milliseconds: 100),
+        //     curve: Curves.linear,
+        //   );
+
+        //   setState(() {});
+        // },
+        items: [
+          BottomNavigationBarItem(
+            icon: Container(
+              height: 50,
+              width: 100,
+              color: Colors.red[200],
+              child: Row(
+                children: [
+                  Icon(Icons.trending_up),
+                  SizedBox(
+                    width: 5.w,
+                  ),
+                  Text('Home'),
+                ],
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.trending_up),
+            label: ("Second"),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            label: ("Third"),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            label: ("Third"),
+          ),
+        ],
+      ),

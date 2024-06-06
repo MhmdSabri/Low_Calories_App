@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/My_Payment/Add_New_Payment.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/My_Payment/Change_Payment_Screen.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Settings_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/My_Payment/Add_New_Payment.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/My_Payment/Change_Payment_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Settings_Screen.dart';
 
 class MyPaymentScreen extends StatefulWidget {
   const MyPaymentScreen({super.key});
@@ -17,52 +17,50 @@ class _MyPaymentScreenState extends State<MyPaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const SettingsScreen()));
+            },
+            icon: const Icon(Icons.arrow_circle_left_outlined)),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const AddNewPayment()));
+              },
+              icon: const Icon(
+                Icons.add_circle_outline,
+                color: Color(0xff5A5D61),
+              ))
+        ],
+        title: Text(
+          "My Payment",
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.all(10.w),
+        padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
         child: Column(
           children: [
             Expanded(
               child: Column(
                 children: [
-                  SizedBox(height: 30.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                          onTap: () {
-                            Navigator.pop(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const SettingsScreen()));
-                          },
-                          child: const Icon(Icons.arrow_circle_left_outlined)),
-                      Text(
-                        "My Payment",
-                        style: TextStyle(
-                          color: const Color(0xFF12161C),
-                          fontSize: 14.5.sp,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      const AddNewPayment()));
-                        },
-                        child: const Icon(
-                          Icons.add_circle_outline_outlined,
-                          color: Color(0xff5A5D61),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 20.h),
                   Container(
                     width: double.infinity,
                     height: 90.h,

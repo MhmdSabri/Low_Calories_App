@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/PhysicalDataAge.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/Physical_Data_Sensitivities.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Physical_Data/PhysicalDataAge.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Physical_Data/Physical_Data_Sensitivities.dart';
 
 class PhysicalDataGender extends StatefulWidget {
   const PhysicalDataGender({super.key});

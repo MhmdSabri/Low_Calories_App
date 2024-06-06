@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/Body_data/Age_screen.dart';
-import 'package:low_calories_app/pages/Body_data/Sensitivities_screen.dart';
+import 'package:Low_Calories/pages/Body_data/Age_screen.dart';
+import 'package:Low_Calories/pages/Body_data/Sensitivities_screen.dart';
 
 class GenderScreen extends StatefulWidget {
   const GenderScreen({super.key});

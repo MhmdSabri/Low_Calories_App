@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Settings_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Settings_Screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -8,38 +8,33 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const SettingsScreen()));
+            },
+            icon: const Icon(Icons.arrow_circle_left_outlined)),
+        title: Text(
+          "Profile Settings",
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(12.w),
+          padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
           child: Column(children: [
-            SizedBox(height: 30.h),
-            Row(
-              children: [
-                GestureDetector(
-                    onTap: () {
-                      Navigator.pop(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  const SettingsScreen()));
-                    },
-                    child: const Icon(Icons.arrow_circle_left_outlined)),
-                SizedBox(
-                  width: 100.w,
-                ),
-                Text(
-                  "Dashboard",
-                  style: TextStyle(
-                    color: const Color(0xFF12161C),
-                    fontSize: 14.sp,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10.h),
             Column(
               children: [
                 SizedBox(

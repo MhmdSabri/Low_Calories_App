@@ -1,4 +1,4 @@
-package com.example.low_calories_app
+package com.example.Low_Calories
 
 import io.flutter.embedding.android.FlutterActivity
 

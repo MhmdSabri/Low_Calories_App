@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/NavBar/Meal_data.dart';
+import 'package:Low_Calories/pages/NavBar/Meal_data.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 
@@ -61,24 +61,23 @@ class _DailyDietScreenState extends State<DailyDietScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Paleo Diet',
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(10.w),
+          padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
           child: Column(children: [
-            SizedBox(height: 30.h),
-            Center(
-              child: Text(
-                'Paleo Diet',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: const Color(0xFF12161C),
-                  fontSize: 14.5.sp,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            SizedBox(height: 15.h),
             Column(
               children: [
                 SizedBox(

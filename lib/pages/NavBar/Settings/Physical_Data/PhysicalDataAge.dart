@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/PhysicalDataWeight.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/Physical_Data_Gender.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Physical_Data/PhysicalDataWeight.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Physical_Data/Physical_Data_Gender.dart';
 
 // import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 

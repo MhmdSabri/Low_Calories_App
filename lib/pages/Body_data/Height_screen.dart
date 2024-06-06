@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/Body_data/Weight_screen.dart';
+import 'package:Low_Calories/pages/Body_data/Weight_screen.dart';
 import 'package:vertical_weight_slider/vertical_weight_slider.dart';
 
 class HeightScreen extends StatefulWidget {

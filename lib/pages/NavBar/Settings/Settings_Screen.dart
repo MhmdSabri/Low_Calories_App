@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Change_Password_Screen.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Dashboard/DashboardScreen.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/ForgotYourPasswordSettings.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Help_And_Support.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Legal_And_Policies_Settings.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/My_Address/My_Address.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/My_Payment/My_Payment_Screen.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Physical_Data/Physical_Data_Height.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/Profile_Settings.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/VerificationDeleteAccount.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Change_Password_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Dashboard/DashboardScreen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/ForgotYourPasswordSettings.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Help_And_Support.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Legal_And_Policies_Settings.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/My_Address/My_Address.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/My_Payment/My_Payment_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Physical_Data/Physical_Data_Height.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Profile_Settings.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/VerificationDeleteAccount.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -25,25 +25,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Settings',
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(10.w),
+          padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
           child: Column(children: [
-            SizedBox(height: 30.h),
-            Center(
-              child: Text(
-                'Settings',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: const Color(0xFF12161C),
-                  fontSize: 14.5.sp,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            SizedBox(height: 15.h),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,

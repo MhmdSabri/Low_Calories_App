@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:low_calories_app/pages/Body_data/Gender_screen.dart';
-import 'package:low_calories_app/pages/NavBar/Custom_NavBar/NavBar.dart';
+import 'package:Low_Calories/pages/Body_data/Gender_screen.dart';
+import 'package:Low_Calories/pages/NavBar/Custom_NavBar/NavBar.dart';
 
 class SensitivitiesScreen extends StatefulWidget {
   const SensitivitiesScreen({super.key});

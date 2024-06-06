@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:low_calories_app/pages/NavBar/Settings/Settings_Screen.dart';
-import 'package:low_calories_app/pages/NavBar/Settings/VerificationSettings.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/Settings_Screen.dart';
+import 'package:Low_Calories/pages/NavBar/Settings/VerificationSettings.dart';
 
 class ForgotYourPasswordSettings extends StatefulWidget {
   const ForgotYourPasswordSettings({super.key});

@@ -1,6 +1,6 @@
 {
-    "name": "low_calories_app",
-    "short_name": "low_calories_app",
+    "name": "Low_Calories",
+    "short_name": "Low_Calories",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

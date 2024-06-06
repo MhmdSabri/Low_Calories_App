@@ -53,23 +53,22 @@ class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(12.w),
-        child: Column(children: [
-          SizedBox(height: 30.h),
-          Center(
-            child: Text(
-              'Notifications',
-              style: TextStyle(
-                color: const Color(0xFF12161C),
-                fontSize: 15.sp,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w500,
-
-              ),
-            ),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Notifications',
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
           ),
-          SizedBox(height: 15.h),
+        ),
+      ),
+      body: Padding(
+        padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
+        child: Column(children: [
           Expanded(
             child: ListView.builder(
               padding: EdgeInsets.zero,

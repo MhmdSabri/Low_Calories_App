@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:low_calories_app/pages/Home/Medical_Instructions.dart';
-import 'package:low_calories_app/pages/Home/Packages_screen.dart';
-import 'package:low_calories_app/pages/Home/Single_Chat_Screen.dart';
-import 'package:low_calories_app/pages/Map_Screen.dart';
+import 'package:Low_Calories/pages/Home/Medical_Instructions.dart';
+import 'package:Low_Calories/pages/Home/Packages_screen.dart';
+import 'package:Low_Calories/pages/Home/Single_Chat_Screen.dart';
+import 'package:Low_Calories/pages/Map_Screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomePage extends StatefulWidget {
@@ -78,6 +78,107 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leadingWidth: 60.w,
+        leading: Padding(
+          padding: EdgeInsets.only(left: 10.r, top: 5.r),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                width: 40.w,
+                height: 38.h,
+                decoration: ShapeDecoration(
+                  image: const DecorationImage(
+                    image: AssetImage("Images/HomePage/user/userImage.png"),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4.w),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        centerTitle: false,
+        titleSpacing: 0,
+        title: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text(
+                  'Hi, Mohamed Elsherif',
+                  style: TextStyle(
+                    color: const Color(0xFF12161C),
+                    fontSize: 12.5.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+            Row(children: [
+              SvgPicture.asset("Images/HomePage/user/location.svg"),
+              SizedBox(
+                width: 1.w,
+              ),
+              Text(
+                'Riyadh City Boulevard, Riyadh',
+                style: TextStyle(
+                  color: const Color(0xFF12161C),
+                  fontSize: 10.5.sp,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ]),
+          ],
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.all(10.w),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  height: 25.h,
+                  width: 62.w,
+                  padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2.h),
+                  decoration: ShapeDecoration(
+                    color: const Color(0x66FBCF04),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4.w)),
+                  ),
+                  child: Row(children: [
+                    SizedBox(
+                      height: 21.h,
+                      width: 49.w,
+                      child: Row(
+                        children: [
+                          SvgPicture.asset("Images/HomePage/user/box.svg"),
+                          SizedBox(width: 7.w),
+                          Text(
+                            '218',
+                            style: TextStyle(
+                              color: const Color(0xFFD28800),
+                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ]),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
         backgroundColor: const Color(0xff85BE46),
@@ -94,110 +195,110 @@ class _HomePageState extends State<HomePage> {
         child: Padding(
           padding: EdgeInsets.all(10.w),
           child: Column(children: [
-            SizedBox(
-              height: 30.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 38.w,
-                          height: 38.h,
-                          decoration: ShapeDecoration(
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                  "Images/HomePage/user/userImage.png"),
-                              fit: BoxFit.fill,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4.w),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(width: 10.w),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              'Hi, Mohamed Elsherif',
-                              style: TextStyle(
-                                color: const Color(0xFF12161C),
-                                fontSize: 12.5.sp,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(children: [
-                          SvgPicture.asset("Images/HomePage/user/location.svg"),
-                          SizedBox(
-                            width: 1.w,
-                          ),
-                          Text(
-                            'Riyadh City Boulevard, Riyadh',
-                            style: TextStyle(
-                              color: const Color(0xFF12161C),
-                              fontSize: 10.5.sp,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                        ]),
-                      ],
-                    )
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 25.h,
-                      width: 62.w,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 5.w, vertical: 2.h),
-                      decoration: ShapeDecoration(
-                        color: const Color(0x66FBCF04),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(4.w)),
-                      ),
-                      child: Row(children: [
-                        SizedBox(
-                          height: 21.h,
-                          width: 49.w,
-                          child: Row(
-                            children: [
-                              SvgPicture.asset("Images/HomePage/user/box.svg"),
-                              SizedBox(width: 7.w),
-                              Text(
-                                '218',
-                                style: TextStyle(
-                                  color: const Color(0xFFD28800),
-                                  fontSize: 11.sp,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ]),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(height: 10.h),
+            // SizedBox(
+            //   height: 30.h,
+            // ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     Row(
+            //       children: [
+            //         Column(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           mainAxisAlignment: MainAxisAlignment.start,
+            //           children: [
+            //             Container(
+            //               width: 38.w,
+            //               height: 38.h,
+            //               decoration: ShapeDecoration(
+            //                 image: const DecorationImage(
+            //                   image: AssetImage(
+            //                       "Images/HomePage/user/userImage.png"),
+            //                   fit: BoxFit.fill,
+            //                 ),
+            //                 shape: RoundedRectangleBorder(
+            //                   borderRadius: BorderRadius.circular(4.w),
+            //                 ),
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //         SizedBox(width: 10.w),
+            //         Column(
+            //           mainAxisAlignment: MainAxisAlignment.start,
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           children: [
+            //             Row(
+            //               children: [
+            //                 Text(
+            //                   'Hi, Mohamed Elsherif',
+            //                   style: TextStyle(
+            //                     color: const Color(0xFF12161C),
+            //                     fontSize: 12.5.sp,
+            //                     fontWeight: FontWeight.w500,
+            //                   ),
+            //                 ),
+            //               ],
+            //             ),
+            //             Row(children: [
+            //               SvgPicture.asset("Images/HomePage/user/location.svg"),
+            //               SizedBox(
+            //                 width: 1.w,
+            //               ),
+            //               Text(
+            //                 'Riyadh City Boulevard, Riyadh',
+            //                 style: TextStyle(
+            //                   color: const Color(0xFF12161C),
+            //                   fontSize: 10.5.sp,
+            //                   fontFamily: 'Poppins',
+            //                   fontWeight: FontWeight.w400,
+            //                 ),
+            //               ),
+            //             ]),
+            //           ],
+            //         )
+            //       ],
+            //     ),
+            //     Column(
+            //       mainAxisAlignment: MainAxisAlignment.start,
+            //       crossAxisAlignment: CrossAxisAlignment.start,
+            //       children: [
+            //         Container(
+            //           height: 25.h,
+            //           width: 62.w,
+            //           padding:
+            //               EdgeInsets.symmetric(horizontal: 5.w, vertical: 2.h),
+            //           decoration: ShapeDecoration(
+            //             color: const Color(0x66FBCF04),
+            //             shape: RoundedRectangleBorder(
+            //                 borderRadius: BorderRadius.circular(4.w)),
+            //           ),
+            //           child: Row(children: [
+            //             SizedBox(
+            //               height: 21.h,
+            //               width: 49.w,
+            //               child: Row(
+            //                 children: [
+            //                   SvgPicture.asset("Images/HomePage/user/box.svg"),
+            //                   SizedBox(width: 7.w),
+            //                   Text(
+            //                     '218',
+            //                     style: TextStyle(
+            //                       color: const Color(0xFFD28800),
+            //                       fontSize: 11.sp,
+            //                       fontWeight: FontWeight.w500,
+            //                     ),
+            //                   ),
+            //                 ],
+            //               ),
+            //             )
+            //           ]),
+            //         ),
+            //       ],
+            //     ),
+            //   ],
+            // ),
+            // SizedBox(height: 10.h),
             SizedBox(
               height: 170.h,
               width: double.infinity,
@@ -244,157 +345,152 @@ class _HomePageState extends State<HomePage> {
                     child: Stack(
                       children: [
                         GestureDetector(
-                          onTap: () => Scaffold.of(context)
-                              .showBottomSheet((context) => StatefulBuilder(
-                                    builder: (BuildContext context, setState) {
-                                      return SizedBox(
-                                        height: MediaQuery.of(context)
-                                                .copyWith()
-                                                .size
-                                                .height *
-                                            0.85,
-                                        width: double.infinity,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(10.w),
-                                          child: Column(
+                          onTap: () {
+                            showModalBottomSheet(
+                              shape: ContinuousRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(15.w),
+                                      topRight: Radius.circular(15.w))),
+                              context: context,
+                              isScrollControlled: true,
+                              builder: (context) {
+                                return SizedBox(
+                                  height: MediaQuery.of(context)
+                                          .copyWith()
+                                          .size
+                                          .height *
+                                      0.84,
+                                  width: double.infinity,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(10.w),
+                                    child: Column(
+                                      children: [
+                                        SizedBox(height: 10.h),
+                                        SizedBox(
+                                          height: 170.h,
+                                          width: double.infinity,
+                                          child: Stack(
                                             children: [
-                                              SizedBox(height: 10.h),
-                                              SizedBox(
-                                                height: 170.h,
-                                                width: double.infinity,
-                                                child: Stack(
-                                                  children: [
-                                                    PageView.builder(
-                                                      controller: controller,
-                                                      physics:
-                                                          const RangeMaintainingScrollPhysics(),
-                                                      itemCount: dietPlanDetails
-                                                          .length,
-                                                      itemBuilder:
-                                                          (context, index) {
-                                                        return Padding(
-                                                          padding: EdgeInsets
-                                                              .symmetric(
-                                                                  horizontal:
-                                                                      5.w),
-                                                          child: SizedBox(
-                                                            height: 170.h,
-                                                            child: Image.asset(
-                                                              dietPlanDetails[
-                                                                  index],
-                                                              fit: BoxFit.fill,
-                                                            ),
-                                                          ),
-                                                        );
-                                                      },
-                                                    ),
-                                                    Positioned(
-                                                      bottom: 10.h,
-                                                      right: 150.w,
-                                                      child: Column(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          SmoothPageIndicator(
-                                                            controller:
-                                                                controller,
-                                                            count:
-                                                                dietPlanDetails
-                                                                    .length,
-                                                            axisDirection:
-                                                                Axis.horizontal,
-                                                            effect: WormEffect(
-                                                              activeDotColor:
-                                                                  const Color(
-                                                                      0xffFFFFFF),
-                                                              dotColor: const Color(
-                                                                      0xffFFFFFF)
-                                                                  .withOpacity(
-                                                                      0.50),
-                                                              dotHeight: 7.h,
-                                                              dotWidth: 7.w,
-                                                              radius: 25.r,
-                                                            ),
-                                                          ),
-                                                        ],
+                                              PageView.builder(
+                                                controller: controller,
+                                                physics:
+                                                    const RangeMaintainingScrollPhysics(),
+                                                itemCount:
+                                                    dietPlanDetails.length,
+                                                itemBuilder: (context, index) {
+                                                  return Padding(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                            horizontal: 5.w),
+                                                    child: SizedBox(
+                                                      height: 170.h,
+                                                      child: Image.asset(
+                                                        dietPlanDetails[index],
+                                                        fit: BoxFit.fill,
                                                       ),
-                                                    )
+                                                    ),
+                                                  );
+                                                },
+                                              ),
+                                              Positioned(
+                                                bottom: 10.h,
+                                                right: 150.w,
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    SmoothPageIndicator(
+                                                      controller: controller,
+                                                      count: dietPlanDetails
+                                                          .length,
+                                                      axisDirection:
+                                                          Axis.horizontal,
+                                                      effect: WormEffect(
+                                                        activeDotColor:
+                                                            const Color(
+                                                                0xffFFFFFF),
+                                                        dotColor: const Color(
+                                                                0xffFFFFFF)
+                                                            .withOpacity(0.50),
+                                                        dotHeight: 7.h,
+                                                        dotWidth: 7.w,
+                                                        radius: 25.r,
+                                                      ),
+                                                    ),
                                                   ],
                                                 ),
-                                              ),
-                                              SizedBox(
-                                                height: 10.h,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    "Gastronome's Haven",
-                                                    style: TextStyle(
-                                                      color: const Color(
-                                                          0xFF12161C),
-                                                      fontSize: 22.sp,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              SizedBox(
-                                                height: 5.h,
-                                              ),
-                                              Column(
-                                                children: [
-                                                  SizedBox(
-                                                    width: double.infinity,
-                                                    child: Text(
-                                                      "Experience culinary excellence at Gastronome's Haven, where each dish is a masterpiece crafted with passion. Our elegant ambiance and diverse menu promise a memorable dining adventure, blending flavors from around the world. Immerse yourself in a sophisticated atmosphere that elevates your dining experience to new heights.",
-                                                      style: TextStyle(
-                                                        color: const Color(
-                                                            0xFF5A5D61),
-                                                        fontSize: 12.sp,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        height: 1.5,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              SizedBox(
-                                                height: 8.h,
-                                              ),
-                                              Row(children: [
-                                                SvgPicture.asset(
-                                                    "Images/HomePage/user/location.svg"),
-                                                SizedBox(
-                                                  width: 2.w,
-                                                ),
-                                                Text(
-                                                  'Riyadh City Boulevard, Riyadh',
-                                                  style: TextStyle(
-                                                    color:
-                                                        const Color(0xFF12161C),
-                                                    fontSize: 10.5.sp,
-                                                    fontFamily: 'Poppins',
-                                                    fontWeight: FontWeight.w400,
-                                                  ),
-                                                ),
-                                              ]),
-                                              SizedBox(
-                                                height: 8.h,
-                                              ),
-                                              const MapScreen()
+                                              )
                                             ],
                                           ),
                                         ),
-                                      );
-                                    },
-                                  )),
+                                        SizedBox(
+                                          height: 10.h,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Gastronome's Haven",
+                                              style: TextStyle(
+                                                color: const Color(0xFF12161C),
+                                                fontSize: 22.sp,
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 5.h,
+                                        ),
+                                        Column(
+                                          children: [
+                                            SizedBox(
+                                              width: double.infinity,
+                                              child: Text(
+                                                "Experience culinary excellence at Gastronome's Haven, where each dish is a masterpiece crafted with passion. Our elegant ambiance and diverse menu promise a memorable dining adventure, blending flavors from around the world. Immerse yourself in a sophisticated atmosphere that elevates your dining experience to new heights.",
+                                                style: TextStyle(
+                                                  color:
+                                                      const Color(0xFF5A5D61),
+                                                  fontSize: 12.sp,
+                                                  fontWeight: FontWeight.w400,
+                                                  height: 1.5,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 8.h,
+                                        ),
+                                        Row(children: [
+                                          SvgPicture.asset(
+                                              "Images/HomePage/user/location.svg"),
+                                          SizedBox(
+                                            width: 2.w,
+                                          ),
+                                          Text(
+                                            'Riyadh City Boulevard, Riyadh',
+                                            style: TextStyle(
+                                              color: const Color(0xFF12161C),
+                                              fontSize: 10.5.sp,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ),
+                                        ]),
+                                        SizedBox(
+                                          height: 8.h,
+                                        ),
+                                        const MapScreen()
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                           child: Column(children: [
                             Container(
                               height: 75.h,
@@ -579,238 +675,262 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: [
                             GestureDetector(
-                              onTap: () => Scaffold.of(
-                                context,
-                              ).showBottomSheet((context) => SizedBox(
-                                    height: MediaQuery.of(context)
-                                            .copyWith()
-                                            .size
-                                            .height *
-                                        0.58,
-                                    width: double.infinity,
-                                    child: Padding(
-                                      padding: EdgeInsets.all(10.w),
-                                      child: Column(
-                                        children: [
-                                          SizedBox(height: 10.h),
-                                          SizedBox(
-                                            height: 170.h,
-                                            width: double.infinity,
-                                            child: Stack(
-                                              children: [
-                                                PageView.builder(
-                                                  controller: controller,
-                                                  physics:
-                                                      const RangeMaintainingScrollPhysics(),
-                                                  itemCount:
-                                                      dietPlanDetails2.length,
-                                                  itemBuilder:
-                                                      (context, index) {
-                                                    return Padding(
-                                                      padding: EdgeInsets.only(
-                                                          right: 7.w),
-                                                      child: SizedBox(
-                                                        height: 170.h,
-                                                        child: Image.asset(
-                                                          dietPlanDetails2[
-                                                              index],
-                                                          fit: BoxFit.fill,
-                                                        ),
-                                                      ),
-                                                    );
-                                                  },
-                                                ),
-                                                Positioned(
-                                                  bottom: 10.h,
-                                                  right: 150.w,
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      SmoothPageIndicator(
-                                                        controller: controller,
-                                                        count: dietPlanDetails
-                                                            .length,
-                                                        axisDirection:
-                                                            Axis.horizontal,
-                                                        effect: WormEffect(
-                                                          activeDotColor:
-                                                              const Color(
-                                                                  0xffFFFFFF),
-                                                          dotColor: const Color(
-                                                                  0xffFFFFFF)
-                                                              .withOpacity(
-                                                                  0.50),
-                                                          dotHeight: 7.h,
-                                                          dotWidth: 7.w,
-                                                          radius: 25.r,
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 10.h,
-                                          ),
-                                          Row(
+                              onTap: () {
+                                showModalBottomSheet(
+                                  shape: ContinuousRectangleBorder(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(15.w),
+                                          topRight: Radius.circular(15.w))),
+                                  isScrollControlled: true,
+                                  context: context,
+                                  builder: (context) {
+                                    return SizedBox(
+                                        height: MediaQuery.of(context)
+                                                .copyWith()
+                                                .size
+                                                .height *
+                                            0.59,
+                                        width: double.infinity,
+                                        child: Padding(
+                                          padding: EdgeInsets.all(10.w),
+                                          child: Column(
                                             children: [
-                                              Text(
-                                                "Paleo Diet",
-                                                style: TextStyle(
-                                                  color:
-                                                      const Color(0xFF12161C),
-                                                  fontSize: 22.sp,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            height: 5.h,
-                                          ),
-                                          Column(
-                                            children: [
+                                              SizedBox(height: 10.h),
                                               SizedBox(
+                                                height: 170.h,
                                                 width: double.infinity,
-                                                child: Text(
-                                                  "The Paleo Diet, short for the Paleolithic Diet, is a nutritional approach that aims to mimic the dietary patterns of our ancestors during the Stone Age. The fundamental concept is to consume foods that would have been available to hunter-gatherer communities, predating the advent of agriculture..",
-                                                  style: TextStyle(
-                                                    color:
-                                                        const Color(0xFF5A5D61),
-                                                    fontSize: 12.sp,
-                                                    fontWeight: FontWeight.w400,
-                                                    height: 1.5,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            height: 8.h,
-                                          ),
-                                          SizedBox(
-                                            height: 8.h,
-                                          ),
-                                          Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                flex: 2,
-                                                child: Column(children: [
-                                                  MaterialButton(
-                                                    onPressed: () {
-                                                      Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder: (BuildContext
-                                                                      context) =>
-                                                                  const PackagesScreen()));
-                                                    },
-                                                    color:
-                                                        const Color(0xFF85BE46),
-                                                    shape:
-                                                        RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        6.r)),
-                                                    textColor: Colors.white,
-                                                    height: 42.h,
-                                                    minWidth: double.infinity,
-                                                    child: Text(
-                                                      'Pay now',
-                                                      style: TextStyle(
-                                                          color: const Color(
-                                                              0xffFFFFFF),
-                                                          fontSize: 14.5.sp,
-                                                          fontWeight:
-                                                              FontWeight.w500),
-                                                    ),
-                                                  ),
-                                                ]),
-                                              ),
-                                              SizedBox(width: 5.w),
-                                              Expanded(
-                                                flex: 1,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                child: Stack(
                                                   children: [
-                                                    Text(
-                                                      'The price is',
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style: TextStyle(
-                                                        color: const Color(
-                                                            0xFF12161C),
-                                                        fontSize: 13.sp,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                      ),
+                                                    PageView.builder(
+                                                      controller: controller,
+                                                      physics:
+                                                          const RangeMaintainingScrollPhysics(),
+                                                      itemCount:
+                                                          dietPlanDetails2
+                                                              .length,
+                                                      itemBuilder:
+                                                          (context, index) {
+                                                        return Padding(
+                                                          padding:
+                                                              EdgeInsets.only(
+                                                                  right: 7.w),
+                                                          child: SizedBox(
+                                                            height: 170.h,
+                                                            child: Image.asset(
+                                                              dietPlanDetails2[
+                                                                  index],
+                                                              fit: BoxFit.fill,
+                                                            ),
+                                                          ),
+                                                        );
+                                                      },
                                                     ),
-                                                    SizedBox(
-                                                      height: 10.h,
-                                                    ),
-                                                    Text.rich(
-                                                      TextSpan(
+                                                    Positioned(
+                                                      bottom: 10.h,
+                                                      right: 150.w,
+                                                      child: Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
                                                         children: [
-                                                          TextSpan(
-                                                            text: '1200 SAR',
-                                                            style: TextStyle(
-                                                              color: const Color(
-                                                                  0xFF85BE46),
-                                                              fontSize: 14.5.sp,
-                                                              fontFamily:
-                                                                  'Poppins',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500,
-                                                              height: 0.09,
-                                                            ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: '/',
-                                                            style: TextStyle(
-                                                              color: const Color(
-                                                                  0xFF85BE46),
-                                                              fontSize: 11.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: 'month',
-                                                            style: TextStyle(
-                                                              color: const Color(
-                                                                  0xFF12161C),
-                                                              fontSize: 11.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
+                                                          SmoothPageIndicator(
+                                                            controller:
+                                                                controller,
+                                                            count:
+                                                                dietPlanDetails
+                                                                    .length,
+                                                            axisDirection:
+                                                                Axis.horizontal,
+                                                            effect: WormEffect(
+                                                              activeDotColor:
+                                                                  const Color(
+                                                                      0xffFFFFFF),
+                                                              dotColor: const Color(
+                                                                      0xffFFFFFF)
+                                                                  .withOpacity(
+                                                                      0.50),
+                                                              dotHeight: 7.h,
+                                                              dotWidth: 7.w,
+                                                              radius: 25.r,
                                                             ),
                                                           ),
                                                         ],
                                                       ),
-                                                    ),
+                                                    )
                                                   ],
                                                 ),
+                                              ),
+                                              SizedBox(
+                                                height: 10.h,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text(
+                                                    "Paleo Diet",
+                                                    style: TextStyle(
+                                                      color: const Color(
+                                                          0xFF12161C),
+                                                      fontSize: 22.sp,
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 5.h,
+                                              ),
+                                              Column(
+                                                children: [
+                                                  SizedBox(
+                                                    width: double.infinity,
+                                                    child: Text(
+                                                      "The Paleo Diet, short for the Paleolithic Diet, is a nutritional approach that aims to mimic the dietary patterns of our ancestors during the Stone Age. The fundamental concept is to consume foods that would have been available to hunter-gatherer communities, predating the advent of agriculture..",
+                                                      style: TextStyle(
+                                                        color: const Color(
+                                                            0xFF5A5D61),
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        height: 1.5,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 8.h,
+                                              ),
+                                              SizedBox(
+                                                height: 8.h,
+                                              ),
+                                              Row(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Expanded(
+                                                    flex: 2,
+                                                    child: Column(children: [
+                                                      MaterialButton(
+                                                        onPressed: () {
+                                                          Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                  builder: (BuildContext
+                                                                          context) =>
+                                                                      const PackagesScreen()));
+                                                        },
+                                                        color: const Color(
+                                                            0xFF85BE46),
+                                                        shape: RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        6.r)),
+                                                        textColor: Colors.white,
+                                                        height: 42.h,
+                                                        minWidth:
+                                                            double.infinity,
+                                                        child: Text(
+                                                          'Pay now',
+                                                          style: TextStyle(
+                                                              color: const Color(
+                                                                  0xffFFFFFF),
+                                                              fontSize: 14.5.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                    ]),
+                                                  ),
+                                                  SizedBox(width: 5.w),
+                                                  Expanded(
+                                                    flex: 1,
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          'The price is',
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: TextStyle(
+                                                            color: const Color(
+                                                                0xFF12161C),
+                                                            fontSize: 13.sp,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                          ),
+                                                        ),
+                                                        SizedBox(
+                                                          height: 10.h,
+                                                        ),
+                                                        Text.rich(
+                                                          TextSpan(
+                                                            children: [
+                                                              TextSpan(
+                                                                text:
+                                                                    '1200 SAR',
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: const Color(
+                                                                      0xFF85BE46),
+                                                                  fontSize:
+                                                                      14.5.sp,
+                                                                  fontFamily:
+                                                                      'Poppins',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                  height: 0.09,
+                                                                ),
+                                                              ),
+                                                              TextSpan(
+                                                                text: '/',
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: const Color(
+                                                                      0xFF85BE46),
+                                                                  fontSize:
+                                                                      11.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                ),
+                                                              ),
+                                                              TextSpan(
+                                                                text: 'month',
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: const Color(
+                                                                      0xFF12161C),
+                                                                  fontSize:
+                                                                      11.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  )
+                                                ],
                                               )
                                             ],
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  )),
+                                          ),
+                                        ));
+                                  },
+                                );
+                              },
                               child: Container(
                                 width: 122.w,
                                 height: 188.h,

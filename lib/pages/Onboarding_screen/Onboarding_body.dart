@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/Create%20account/Create_Account.dart';
+import 'package:Low_Calories/pages/Create%20account/Create_Account.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

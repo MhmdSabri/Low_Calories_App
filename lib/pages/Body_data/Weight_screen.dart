@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/Body_data/Age_screen.dart';
-import 'package:low_calories_app/pages/Body_data/Height_screen.dart';
+import 'package:Low_Calories/pages/Body_data/Age_screen.dart';
+import 'package:Low_Calories/pages/Body_data/Height_screen.dart';
 import 'package:animated_weight_picker/animated_weight_picker.dart';
 
 class WeightScreen extends StatefulWidget {

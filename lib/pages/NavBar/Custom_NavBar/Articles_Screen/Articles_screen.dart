@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/NavBar/Custom_NavBar/Articles_Screen/Individual_Article.dart';
+import 'package:Low_Calories/pages/NavBar/Custom_NavBar/Articles_Screen/Individual_Article.dart';
 
 class ArticlesScreen extends StatefulWidget {
   const ArticlesScreen({super.key});
@@ -60,23 +60,23 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Articles',
+          style: TextStyle(
+            color: const Color(0xFF12161C),
+            fontSize: 14.sp,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       body: Padding(
-        padding: EdgeInsets.all(12.w),
+        padding: EdgeInsets.only(left: 12.r, right: 12.r, bottom: 12.r),
         child: Column(
           children: [
-            SizedBox(height: 30.h),
-            Center(
-              child: Text(
-                'Articles',
-                style: TextStyle(
-                  color: const Color(0xFF12161C),
-                  fontSize: 15.sp,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            SizedBox(height: 15.h),
             Expanded(
                 child: ListView.builder(
               padding: EdgeInsets.zero,

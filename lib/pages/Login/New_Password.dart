@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:low_calories_app/pages/Login/Forgot_your_password.dart';
+import 'package:Low_Calories/pages/Login/Forgot_your_password.dart';
 
-import 'package:low_calories_app/pages/Login/Login_screen.dart';
+import 'package:Low_Calories/pages/Login/Login_screen.dart';
 
 class NewPassword extends StatefulWidget {
   const NewPassword({super.key});
